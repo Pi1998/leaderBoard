@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import './style.css';
-import { renderList, addScore } from './modules/renderList';
+import { renderList, addScore } from './modules/module';
 
 
 const scoreListData = [
