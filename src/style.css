@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primaryColor:#2196f3 ;
+}
+
+main {
+    padding: 3%;
+}
+
+header {
+    padding: 5% 0 5% 5%;
+    font-size: larger;
+}
+
+section {
+    display: flex;
+    justify-content: space-around;
+    gap: 2%;
+}
+
+/* Recent Score Start */
+
+.r-score-container {
+    padding: 2% 1%;
+    width: 40%;
+}
+
+.r-score-heading {
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 2%;
+    width: 100%;
+    padding-bottom: 6%;
+}
+
+.r-score-heading h3 {
+    min-width: 100px;
+    text-align: center;
+}
+
+.r-scores-btn {
+    max-width: 70px;
+    padding: 1% 1%;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+    background-color: rgb(244, 244, 244);
+    border-color: rgba(244, 244, 244);
+}
+
+.r-scores-btn:hover {
+    cursor: pointer;
+    color: rgb(52, 52, 52);
+    border-color: rgba(52, 52, 52);
+}
+
+.score-list {
+    list-style-type: none;
+    padding: 2% 3%;
+    border: 2px solid black;
+    border-color: rgba(0, 0, 0);
+}
+
+.score-list li {
+    padding: 1% 0;
+}
+
+/* Recent Score End */
+
+/* Add score start */
+
+.add-score-container {
+    padding-left: 1%;
+    width: 40%;
+}
+
+.add-score-container h3 {
+    padding: 4% 0 12% 0;
+}
+
+.add-score {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.add-score input {
+    padding: 2% 1%;
+}
+
+.add-score button {
+    max-width: 70px;
+    padding: 1% 1%;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+    background-color: rgb(244, 244, 244);
+    border-color: rgba(244, 244, 244);
+}
+
+.add-score button:hover {
+    cursor: pointer;
+    color: rgb(52, 52, 52);
+    border-color: rgba(52, 52, 52);
+}
+
