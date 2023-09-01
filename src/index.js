@@ -6,7 +6,7 @@ const gameId = 'asUj78KilOt6Uikj0Iy6';
 const apiEndpoint = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameId}/scores/`;
 
 const addScoreList = document.getElementById('add-score-list');
-addScoreList.addEventListener('submit', (e) => {
+addScoreList.addEventListener('submit', async (e) => {
   e.preventDefault();
   const user = document.getElementById('name-input');
   const score = document.getElementById('score-input');
@@ -14,7 +14,7 @@ addScoreList.addEventListener('submit', (e) => {
 
   btnSubmit.disabled = true;
 
-  const result = addScore(apiEndpoint, { user: user.value, score: score.value });
+  const result = await addScore(apiEndpoint, { user: user.value, score: score.value });
   if (result) {
     user.value = '';
     score.value = '';
