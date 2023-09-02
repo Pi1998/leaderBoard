@@ -43,6 +43,7 @@ The leaderboard website showcases scores contributed by distinct players, offeri
 - JavaScript
 - LINTERS
 - Webpack
+- API
 
 ### Tech Stack <a name="tech-stack"></a>
 

@@ -1,11 +1,11 @@
-export const addScore = (scoreListData) => scoreListData;
+export const renderList = (scoreListData) => {
+  const scoreList = document.getElementById('score-list');
 
-export const renderList = (scoreListData, domContainer) => {
   let scoreListMarkup = '';
   if (scoreListData.length > 0) {
     scoreListData.forEach((item) => {
       scoreListMarkup += `<li class='score-list-item' id='${item.id}'>
-            ${item.name}: <span class='score'>${item.score}</span>
+            ${item.user}: <span class='score'>${item.score}</span>
             </li>`;
     });
   } else {
@@ -13,6 +13,24 @@ export const renderList = (scoreListData, domContainer) => {
         There is no Score!
         </p>`;
   }
+  scoreList.innerHTML = scoreListMarkup;
+};
 
-  domContainer.innerHTML = scoreListMarkup;
+export const addScore = async (url, scoreListData) => {
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(scoreListData),
+  });
+
+  const result = await res.json();
+  return result;
+};
+
+export const fetchData = async (url) => {
+  const res = await fetch(url);
+  const data = await res.json();
+  renderList(data.result);
 };
