@@ -6,11 +6,11 @@
 }
 
 :root {
-  --primaryColor: #FA9F42;
-  --complementaryColor: #FBE7E1;
-  --accentColor:#AA7060;
-  --black: #08090A;
-  --white: #F4FAFF;
+  --primaryColor: #fa9f42;
+  --complementaryColor: #fbe7e1;
+  --accentColor: #aa7060;
+  --black: #08090a;
+  --white: #f4faff;
 }
 
 main {
@@ -61,6 +61,7 @@ section {
 }
 
 /* Recent Score End */
+
 /* Add score start */
 
 .add-score-container {
@@ -93,22 +94,21 @@ section {
 
 
 /* Animation */
+
 /* Header */
-.animate-charcter
-{
+.animate-charcter {
   text-transform: uppercase;
-  background-image: linear-gradient(
-    -225deg,
-    #231557 0%,
-    #44107a 29%,
-    #ff1361 67%,
-    #fff800 100%
-  );
-  background-size: auto auto;
-  background-clip: border-box;
+  background-image:
+    linear-gradient(
+      -225deg,
+      #231557 0%,
+      #44107a 29%,
+      #ff1361 67%,
+      #fff800 100%
+    );
   background-size: 200% auto;
   color: var(--white);
-  background-clip: text;
+  background-clip: unset;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
@@ -123,11 +123,10 @@ section {
 
 /* h3 */
 h3:first-child {
-  color: var(--black); 
+  color: var(--black);
   position: relative;
   display: inline-block;
 }
-
 
 h3:first-child::before {
   content: '';
@@ -135,13 +134,12 @@ h3:first-child::before {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 2px; 
-  background-color: var(--complementaryColor); 
-  transform: scaleX(0); 
+  height: 2px;
+  background-color: var(--complementaryColor);
+  transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.3s ease;
 }
-
 
 h3:first-child:hover::before {
   transform: scaleX(1); /* Display the underline on hover */
@@ -150,7 +148,7 @@ h3:first-child:hover::before {
 
 /* Button */
 .glow-on-hover {
-  width:90px;
+  width: 90px;
   height: 30px;
   border: none;
   outline: none;
@@ -162,12 +160,12 @@ h3:first-child:hover::before {
   border-radius: 10px;
 }
 
-.glow-on-hover:before {
+.glow-on-hover::before {
   content: '';
-  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  background: linear-gradient(45deg, #f00, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #f00);
   position: absolute;
   top: -2px;
-  left:-2px;
+  left: -2px;
   background-size: 400%;
   z-index: -1;
   filter: blur(5px);
@@ -175,7 +173,7 @@ h3:first-child:hover::before {
   height: calc(100% + 4px);
   animation: glowing 20s linear infinite;
   opacity: 0;
-  transition: opacity .3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
   border-radius: 10px;
 }
 
@@ -183,15 +181,7 @@ h3:first-child:hover::before {
   color: var(--black);
 }
 
-.glow-on-hover:active:after {
-  background: transparent;
-}
-
-.glow-on-hover:hover:before {
-  opacity: 1;
-}
-
-.glow-on-hover:after {
+.glow-on-hover::after {
   z-index: -1;
   content: '';
   position: absolute;
@@ -201,6 +191,14 @@ h3:first-child:hover::before {
   left: 0;
   top: 0;
   border-radius: 10px;
+}
+
+.glow-on-hover:active::after {
+  background: transparent;
+}
+
+.glow-on-hover:hover::before {
+  opacity: 1;
 }
 
 @keyframes glowing {
@@ -227,9 +225,6 @@ h3:first-child:hover::before {
 }
 
 /* List */
-.score-list:hover li {
-  opacity: 0.2;
-}
 .score-list li {
   list-style: none;
   padding: 10px;
@@ -238,6 +233,11 @@ h3:first-child:hover::before {
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
   transition: transform 0.5s;
 }
+
+.score-list:hover li {
+  opacity: 0.2;
+}
+
 .score-list li:hover {
   transform: scale(1.1);
   z-index: 5;
@@ -252,6 +252,7 @@ h3:first-child:hover::before {
   main {
     padding: 5%;
   }
+
   header {
     text-align: center;
     font-size: medium;
